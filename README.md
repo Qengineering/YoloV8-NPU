@@ -1,5 +1,5 @@
 # YoloV8 NPU
-![output image]( https://qengineering.eu/github/YoloV8_Parking_NPU.webp )
+![output image]( https://qengineering.eu/github/YoloV8_ParkingNPU.webp )
 ## YoloV8 for RK3566/68/88 NPU (Rock 5, Orange Pi 5, Radxa Zero 3). <br/>
 [![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)<br/><br/>
 Special made for the NPU, see [Q-engineering deep learning examples](https://qengineering.eu/deep-learning-examples-on-raspberry-32-64-os.html)
