@@ -66,17 +66,11 @@ int main(int argc, char** argv)
 
     for(i=0;i<16;i++) FPS[i]=0.0;
 
-    if (argc < 2) {
-        fprintf(stderr,"Usage: %s [imagepath] [model (optional)]\n", argv[0]);
+    if (argc < 3) {
+        fprintf(stderr,"Usage: %s [imagepath] [model]\n", argv[0]);
         return -1;
     }
-
-    if (argc == 3) {
-        model_path = argv[2];
-    }
-    else{
-        model_path = (char*) "./model/yolov8s.rknn";
-    }
+    model_path = argv[2];
 
     printf("post process config: box_conf_threshold = %.2f, nms_threshold = %.2f\n", box_conf_threshold, nms_threshold);
 
