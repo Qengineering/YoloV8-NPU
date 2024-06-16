@@ -56,8 +56,6 @@ int main(int argc, char** argv)
     float FPS[16];
     int   i, Fcnt=0;
     std::chrono::steady_clock::time_point Tbegin, Tend;
-    char*          model_path = NULL;
-    const char*    imagepath = argv[1];
     int            img_width          = 0;
     int            img_height         = 0;
     const float    nms_threshold      = NMS_THRESH;
@@ -67,11 +65,14 @@ int main(int argc, char** argv)
     for(i=0;i<16;i++) FPS[i]=0.0;
 
     if (argc < 3) {
-        fprintf(stderr,"Usage: %s [imagepath] [model]\n", argv[0]);
+        fprintf(stderr,"Usage: %s [model] [imagepath]\n", argv[0]);
         return -1;
     }
-    model_path = argv[2];
 
+    char*          model_name = argv[1];
+    const char*    imagepath = argv[2];
+
+    printf("model: %s", model_name);
     printf("post process config: box_conf_threshold = %.2f, nms_threshold = %.2f\n", box_conf_threshold, nms_threshold);
 
     // fire up the neural network
