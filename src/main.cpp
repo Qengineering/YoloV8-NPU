@@ -72,7 +72,7 @@ int main(int argc, char** argv)
     char*          model_path = argv[1];
     const char*    imagepath = argv[2];
 
-    printf("model: %s", model_path);
+    printf("model: %s\n", model_path);
     printf("post process config: box_conf_threshold = %.2f, nms_threshold = %.2f\n", box_conf_threshold, nms_threshold);
 
     // fire up the neural network
